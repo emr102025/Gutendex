@@ -6,7 +6,13 @@ export default function Header() {
       <Link to="/">
         <h1>Gutendex</h1>
       </Link>
-      <Link to="/search">Search</Link>
+      <input
+        type="text"
+        value=""
+        onChange={(e) => e.target.value}
+        placeholder="Search for book.."
+      />
+      <button type="submit">Search</button>
       <button>Favorites</button>
     </nav>
   );
