@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "./CategoryMenu.css";
+import styles from "./CategoryMenu.module.css";
 import {
   FaBookOpen,
-  GiKnifeThrust,
   FaHeart,
   FaBalanceScale,
   FaUsers,
@@ -12,6 +11,7 @@ import {
 } from "react-icons/fa";
 import {
   GiMagnifyingGlass,
+  GiKnifeThrust,
   GiDragonHead,
   GiCrown,
   GiTreasureMap,
@@ -33,7 +33,7 @@ const categories = [
   { name: "War", id: "war", icon: <GiCrossedSwords /> },
   { name: "Philosophy", id: "philosophy", icon: <FaBrain /> },
 ];
-export default function CategoryMenu(id) {
+export default function CategoryMenu() {
   return (
     <section>
       {categories.map((category) => (
@@ -41,12 +41,10 @@ export default function CategoryMenu(id) {
           className={styles.categoryMenu}
           key={category.id}
           to={`/category/${category.name}`}
-          onClick={(e) => {
-            e.preventDefault(e);
-            e.stopPropagation(e);
-            category(id);
-          }}
-        ></Link>
+        >
+          {category.icon}
+          <span>{category.name}</span>
+        </Link>
       ))}
     </section>
   );
