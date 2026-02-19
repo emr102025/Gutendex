@@ -10,9 +10,11 @@ export default function SearchBar() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search for book.."
-        className={styles.searchBar}
+        className={styles.searchInput}
       />
-      <button type="submit">Search</button>
+      <button type="submit" className={styles.searchBtn}>
+        Search
+      </button>
     </form>
   );
 }

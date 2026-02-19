@@ -45,7 +45,7 @@ export default function CategoryMenu() {
         <section className={styles.dropdownMenu}>
           {categories.map((category) => (
             <Link
-              className={styles.categoryMenu}
+              className={styles.categories}
               key={category.id}
               to={`/category/${category.name}`}
               onClick={() => setIsOpen(false)}
