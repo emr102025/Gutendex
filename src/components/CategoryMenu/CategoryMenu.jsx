@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import styles from "./CategoryMenu.module.css";
 import {
   FaBookOpen,
@@ -34,18 +35,27 @@ const categories = [
   { name: "Philosophy", id: "philosophy", icon: <FaBrain /> },
 ];
 export default function CategoryMenu() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <section>
-      {categories.map((category) => (
-        <Link
-          className={styles.categoryMenu}
-          key={category.id}
-          to={`/category/${category.name}`}
-        >
-          {category.icon}
-          <span>{category.name}</span>
-        </Link>
-      ))}
-    </section>
+    <div>
+      <button className="category-toggle" onClick={() => setIsOpen(!isOpen)}>
+        Categories ▾
+      </button>
+      {isOpen && (
+        <section className={styles.dropdownMenu}>
+          {categories.map((category) => (
+            <Link
+              className={styles.categoryMenu}
+              key={category.id}
+              to={`/category/${category.name}`}
+              onClick={() => setIsOpen(false)}
+            >
+              {category.icon}
+              <span>{category.name}</span>
+            </Link>
+          ))}
+        </section>
+      )}
+    </div>
   );
 }
