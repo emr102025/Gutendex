@@ -9,16 +9,17 @@ export const fetchBookDetails = async (id) => {
 };
 
 // ueses axios instance to fetch data from /movie/popular endpoint
-export const fetchBookByCategory = async (category) => {
-  const response = await axios.get(`${baseURL}?Category${category}`);
+export const fetchBookByCategory = async (query) => {
+  const response = await axios.get(`${baseURL}?Category=${query}`);
   return response.data;
 };
 
 // search books, fetches data based on searchquery, if books are not found an Error occur
 export const fetchSearchBooks = async (query) => {
-  const response = await axios.get(`${baseURL}?Search${query}`);
-  if (!response.ok) {
+  try {
+    const response = await axios.get(`${baseURL}?search=${query}`);
+    return response.data;
+  } catch {
     throw new Error("Failed to find books");
   }
-  return response.data;
 };
