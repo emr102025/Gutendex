@@ -5,17 +5,19 @@ import styles from "../Header/Header.module.css";
 
 export default function Header() {
   return (
-    <nav style={{ background: "black" }}>
+    <header style={{ background: "black" }}>
       <Link to="/">
         <h1>Gutendex</h1>
       </Link>
-      <div className={styles.searchBar}>
-        <SearchBar />
-      </div>
-      <button>Favorites</button>
-      <div className={styles.categoryMenu}>
-        <CategoryMenu />
-      </div>
-    </nav>
+      <nav>
+        <div className={styles.searchBar}>
+          <SearchBar />
+        </div>
+        <div className={styles.categoryMenu}>
+          <CategoryMenu />
+        </div>
+        <button>Favorites</button>
+      </nav>
+    </header>
   );
 }
