@@ -1,10 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../SearchBar/SearchBar.module.css";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (!search.trim()) return;
+
+    navigate(`/search?q=${encodeURIComponent(search)}`);
+    setSearch("");
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSearch}>
       <input
         type="text"
         value={search}
