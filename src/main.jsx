@@ -1,15 +1,48 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import App from "./App.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import CategoryPage from "./pages/Category/CategoryPage.jsx";
+import DetailsPage from "./pages/DetailsPage/DetailsPage.jsx";
+import FavoritesPage from "./pages/FavoritesPage/FavoritePage.jsx";
+
 import { ThemeProvider } from "./components/Context/ThemeContext.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
-  </StrictMode>,
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "search",
+        element: <HomePage />,
+      },
+      {
+        path: "category/:categoryName",
+        element: <CategoryPage />,
+      },
+      {
+        path: "book/:bookId",
+        element: <DetailsPage />,
+      },
+      {
+        path: "favorites",
+        element: <FavoritesPage />,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </React.StrictMode>,
 );

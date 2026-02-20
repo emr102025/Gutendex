@@ -1,5 +1,5 @@
 import BookCard from "../BookCard/BookCard";
-import styles from "./BookList.css";
+import styles from "../BookList/BookList.module.css";
 
 export default function BookList({ books }) {
   if (!books || books.length === 0) {

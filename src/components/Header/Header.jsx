@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CategoryMenu from "../CategoryMenu/CategoryMenu";
 import SearchBar from "../SearchBar/SearchBar";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.jsx";
 import styles from "../Header/Header.module.css";
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
         </div>
         <button>Favorites</button>
       </nav>
+      <ThemeSwitcher />
     </header>
   );
 }
