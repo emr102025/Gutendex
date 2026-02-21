@@ -8,6 +8,7 @@ import CategoryPage from "./pages/Category/CategoryPage.jsx";
 import DetailsPage from "./pages/DetailsPage/DetailsPage.jsx";
 import FavoritesPage from "./pages/FavoritesPage/FavoritePage.jsx";
 
+import "./Index.css";
 import { ThemeProvider } from "./components/Context/ThemeContext.jsx";
 
 const router = createBrowserRouter([

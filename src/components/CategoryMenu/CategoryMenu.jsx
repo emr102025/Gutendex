@@ -37,8 +37,11 @@ const categories = [
 export default function CategoryMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <button className="category-toggle" onClick={() => setIsOpen(!isOpen)}>
+    <div className={styles.dropdownWrapper}>
+      <button
+        className={styles.categoryToggle}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         Categories ▾
       </button>
       {isOpen && (

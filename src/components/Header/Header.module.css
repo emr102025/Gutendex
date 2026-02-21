@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-header-light);
+  font-family: "OFL";
+  height: 100px;
+}
+.header a {
+  text-decoration: none;
+}
+
+.Gutendex {
+  justify-content: start;
+  font-size: var(--font-size-h1);
+  color: var(--color-text);
+  margin-left: var(--spacing-big);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.searchBar {
+  margin: auto;
+}
+
+.categoryMenu {
+  margin: 0;
+}
+.theme {
+  margin-right: var(--spacing-big);
+}
+.theme,
+.favorites {
+  padding: 10px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--font-size-p);
+  height: 40px;
+  font-family: "OFL";
+}
+.Light {
+  background: white;
+  color: black;
+}
+
+.Dark {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "OFL";
+  src: url(./assets/OFL.txt);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors --------------------------------------------- */
+  --color-header-light: #b8d18f;
+  --color-header-dark: #35471c;
+  --color-bg-light: #f8f2d9;
+  --color-bg-dark: #7f7f7f;
+  --color-text: #2c2c2c;
+  --color-text-light: #fefefe;
+  --color-border: #757575;
+
+  /* Typography ----------------------------------------- */
+  --font-family: "OFL";
+  --font-size-nav: 1.5rem;
+  --font-size-h1: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-p: 1rem;
+
+  /* Spacing -------------------------------------------- */
+  --spacing-sm: 0.5rem;
+  --spacing-ss: 1rem;
+  --spacing-md: 2rem;
+  --spacing-big: 3rem;
+  --spacing-xl: 8rem;
+
+  /* Border radius -------------------------------------- */
+  --radius-sm: 10px;
+  --radius-md: 25px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}

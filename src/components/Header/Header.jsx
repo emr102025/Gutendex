@@ -6,18 +6,20 @@ import styles from "../Header/Header.module.css";
 
 export default function Header() {
   return (
-    <header style={{ background: "black" }}>
+    <header className={styles.header}>
       <Link to="/">
-        <h1>Gutendex</h1>
+        <h1 className={styles.Gutendex}>GUTENDEX</h1>
       </Link>
-      <nav>
-        <div className={styles.searchBar}>
-          <SearchBar />
-        </div>
+
+      <div className={styles.searchBar}>
+        <SearchBar />
+      </div>
+
+      <nav className={styles.navBar}>
         <div className={styles.categoryMenu}>
           <CategoryMenu />
         </div>
-        <button>Favorites</button>
+        <button className={styles.favorites}>Favorites</button>
       </nav>
       <ThemeSwitcher />
     </header>

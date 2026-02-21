@@ -15,7 +15,7 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form onSubmit={handleSearch} className={styles.searchBar}>
       <input
         type="text"
         value={search}
