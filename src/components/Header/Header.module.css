@@ -1,26 +1,25 @@
 .header {
-  display: flex;
-  align-items: center;
+  display: block;
   background-color: var(--color-header-light);
   font-family: "OFL";
-  height: 100px;
+  height: auto;
 }
 .header a {
   text-decoration: none;
 }
 
 .Gutendex {
-  justify-content: start;
   font-size: var(--font-size-h1);
   color: var(--color-text);
-  margin-left: var(--spacing-big);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) 0px;
 }
 
 .navBar {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-right: 10px;
+  padding-bottom: var(--spacing-sm);
 }
 
 .searchBar {
@@ -28,10 +27,12 @@
 }
 
 .categoryMenu {
-  margin: 0;
+  margin-left: var(--spacing-md);
+  margin-right: var(--spacing-xl);
 }
 .theme {
-  margin-right: var(--spacing-big);
+  margin-right: var(--spacing-md);
+  margin-left: 5px;
 }
 .theme,
 .favorites {

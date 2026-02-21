@@ -37,7 +37,7 @@ const categories = [
 export default function CategoryMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={styles.dropdownWrapper}>
+    <div>
       <button
         className={styles.categoryToggle}
         onClick={() => setIsOpen(!isOpen)}
@@ -53,8 +53,8 @@ export default function CategoryMenu() {
               to={`/category/${category.name}`}
               onClick={() => setIsOpen(false)}
             >
-              {category.icon}
-              <span>{category.name}</span>
+              <div className={styles.icon}>{category.icon}</div>
+              <span className={styles.categoryName}>{category.name}</span>
             </Link>
           ))}
         </section>

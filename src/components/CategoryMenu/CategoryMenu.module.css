@@ -1,7 +1,3 @@
-.dropdownWrapper {
-  position: relative;
-  display: inline-block;
-}
 .categoryToggle {
   padding: 10px 20px;
   border: 2px solid var(--color-border);
@@ -13,19 +9,23 @@
 }
 .dropdownMenu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  gap: var(--spacing-l);
+
   display: flex;
-  flex-direction: column;
-  margin-top: var(--spacing-sm);
+  margin-top: 12px;
   background-color: #f0f0f0;
 
   border: 2px solid var(--color-border);
   border-radius: var(--radius-sm);
-  padding: 10px 30px 10px 10px;
-
-  z-index: 1000;
+  padding: 10px 10px 10px 10px;
 }
 .categories {
   color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 2rem;
 }
