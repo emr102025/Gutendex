@@ -28,7 +28,7 @@
 
 .categoryMenu {
   margin-left: var(--spacing-md);
-  margin-right: var(--spacing-xl);
+  margin-right: var(--spacing-l);
 }
 .theme {
   margin-right: var(--spacing-md);
