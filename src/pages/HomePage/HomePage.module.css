@@ -1,0 +1,11 @@
+.homePage {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.searchList {
+  margin: 70px 0px;
+}

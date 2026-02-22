@@ -4,7 +4,7 @@
   border-radius: var(--radius-sm);
   max-width: min-content;
   padding: 15px;
-  height: 450px;
+  height: 470px;
   display: flex;
   transition:
     transform 0.2s,

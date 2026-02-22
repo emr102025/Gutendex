@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import BookList from "../../components/BookList/BookList.jsx";
 import Pagination from "../../components/Pagination/Pagination.jsx";
 import { fetchSearchBooks } from "../../api/axiosGutendex.js";
+import styles from "../HomePage/HomePage.module.css";
 
 export default function HomePage() {
   const [books, setBooks] = useState([]);
@@ -27,8 +28,10 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>HomePage</h1>
-      <BookList books={books} />
+      <h2 className={styles.homePage}>Search results for "{searchResult}"</h2>
+      <div className={styles.searchList}>
+        <BookList books={books} />
+      </div>
     </>
   );
 }
