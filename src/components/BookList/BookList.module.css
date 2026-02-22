@@ -1,0 +1,13 @@
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin: 100px 0px;
+}
+
+.listItem {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

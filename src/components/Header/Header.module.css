@@ -30,10 +30,12 @@
   margin-left: var(--spacing-md);
   margin-right: var(--spacing-l);
 }
+
 .theme {
   margin-right: var(--spacing-md);
   margin-left: 5px;
 }
+
 .theme,
 .favorites {
   padding: 10px 20px;
@@ -44,6 +46,7 @@
   height: 40px;
   font-family: "OFL";
 }
+
 .Light {
   background: white;
   color: black;

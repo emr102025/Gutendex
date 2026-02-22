@@ -7,18 +7,19 @@
   height: 40px;
   font-family: "OFL";
 }
+
 .dropdownMenu {
   position: absolute;
   gap: var(--spacing-l);
 
   display: flex;
   margin-top: 12px;
-  background-color: #f0f0f0;
-
+  background-color: var(--color-btn);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-sm);
   padding: 10px 10px 10px 10px;
 }
+
 .categories {
   color: var(--color-text);
   display: flex;
@@ -26,6 +27,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .icon {
   font-size: 2rem;
 }

@@ -1,4 +1,31 @@
 .bookCard {
-  position: cover;
   height: 300;
+  border: 2px solid var(--color-border-card);
+  border-radius: var(--radius-sm);
+  max-width: min-content;
+  padding: 15px;
+  height: 450px;
+  display: flex;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.bookCard:hover {
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.333);
+  transform: translateY(-5px);
+}
+.bookCover {
+  position: cover;
+  height: fit-content;
+}
+a {
+  text-decoration: none;
+}
+.info {
+  padding: 10px;
+  color: var(--color-text);
+}
+.author {
+  margin-top: 20px;
+  text-align: bottom;
 }
