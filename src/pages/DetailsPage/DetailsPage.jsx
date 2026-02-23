@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination.jsx";
 import { fetchBookDetails } from "../../api/axiosGutendex.js";
+import styles from "../DetailsPage/DetailsPage.module.css";
 
 export default function DetailsPage() {
   const [book, setBook] = useState(null);
@@ -11,7 +12,7 @@ export default function DetailsPage() {
     const getBook = async () => {
       try {
         const data = await fetchBookDetails(id);
-        setBook(data); // Gutendex puts books inside "results"
+        setBook(data);
       } catch (error) {
         console.error(error);
       }
@@ -20,7 +21,7 @@ export default function DetailsPage() {
     getBook();
   }, [id]);
 
-  if (!book) return <p>Loading...</p>;
+  if (!book) return <p className={styles.loading}>Loading book details ...</p>;
 
   return (
     <article>
