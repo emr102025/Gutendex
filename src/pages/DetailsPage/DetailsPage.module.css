@@ -28,4 +28,25 @@
 .textDetails {
   grid-column: 2 / 3;
   font-size: var(--font-size-details);
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.favBtn {
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-size: var(--font-size-p);
+  background-color: var(--btn);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-top: 12px;
 }

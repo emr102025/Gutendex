@@ -56,7 +56,7 @@ export default function DetailsPage() {
             Open Book
           </a>
         </p>
-        <button>Add to Favorites</button>
+        <button className={styles.favBtn}>Add to Favorites</button>
       </div>
     </article>
   );
