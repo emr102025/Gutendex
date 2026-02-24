@@ -24,33 +24,40 @@ export default function DetailsPage() {
   if (!book) return <p className={styles.loading}>Loading book details ...</p>;
 
   return (
-    <article>
-      <h1>{book.title}</h1>
-      <img src={book.formats?.["image/jpeg"]} alt={book.title} />
-      <p>
-        <strong>Author:</strong> {book.authors?.[0]?.name}
-      </p>
-      <p>
-        <strong>Downloads:</strong> {book.download_count}
-      </p>
-      <p>
-        <strong>Category:</strong> {book.subjects?.join(", ")}
-      </p>
-      <p>
-        <strong>Language:</strong> {book.languages?.join(", ")}
-      </p>
-      <p>
-        <strong>Read online:</strong>{" "}
-        <a
-          href={book.formats?.["text/html"]}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open Book
-        </a>
-      </p>
-
-      <button>Add to Favorites</button>
+    <article className={styles.bookDetails}>
+      <h1 className={styles.title}>{book.title}</h1>
+      <div className={styles.containerImg}>
+        <img
+          src={book.formats?.["image/jpeg"]}
+          alt={book.title}
+          className={styles.bookImg}
+        />
+      </div>
+      <div className={styles.textDetails}>
+        <p>
+          <strong>Author:</strong> {book.authors?.[0]?.name}
+        </p>
+        <p>
+          <strong>Downloads:</strong> {book.download_count}
+        </p>
+        <p>
+          <strong>Category:</strong> {book.subjects?.join(", ")}
+        </p>
+        <p>
+          <strong>Language:</strong> {book.languages?.join(", ")}
+        </p>
+        <p>
+          <strong>Read online:</strong>{" "}
+          <a
+            href={book.formats?.["text/html"]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Book
+          </a>
+        </p>
+        <button>Add to Favorites</button>
+      </div>
     </article>
   );
 }

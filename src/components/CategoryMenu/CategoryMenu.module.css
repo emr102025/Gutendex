@@ -1,11 +1,12 @@
 .categoryToggle {
   padding: 10px 20px;
-  border: 2px solid var(--color-border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
-  color: var(--color-text);
+  color: var(--text-color);
   font-size: var(--font-size-p);
   height: 40px;
   font-family: "OFL";
+  background-color: var(--btn);
 }
 
 .dropdownMenu {
@@ -14,14 +15,14 @@
 
   display: flex;
   margin-top: 12px;
-  background-color: var(--color-btn);
-  border: 2px solid var(--color-border);
+  background-color: var(--btn);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 10px 10px 10px 10px;
 }
 
 .categories {
-  color: var(--color-text);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;

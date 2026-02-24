@@ -1,5 +1,5 @@
 .searchBar {
-  border: 2px solid var(--color-border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
 }
 
@@ -7,6 +7,10 @@
   padding: 10px;
   border-radius: 8px 0px 0px 8px;
   width: 400px;
+  background-color: var(--input);
+}
+input::placeholder {
+  color: var(--text-color);
 }
 
 .searchInput:focus {
@@ -16,7 +20,8 @@
 .searchBtn {
   padding: 10px 20px;
   border-radius: 0px 8px 8px 0px;
-  color: var(--color-text);
+  color: var(--text-color);
+  background-color: var(--btn);
 }
 
 .searchInput,

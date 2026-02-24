@@ -1,5 +1,6 @@
 .bookCard {
-  border: 2px solid var(--color-border-card);
+  background-color: var(--card);
+  border: 2px solid var(--card-border);
   border-radius: var(--radius-sm);
   max-width: min-content;
   padding: 15px;
@@ -22,7 +23,7 @@ a {
 }
 .info {
   padding: 10px;
-  color: var(--color-text);
+  color: var(--text-color);
 }
 .bookTitle {
   display: -webkit-box; /* Because the title is too long on some books */
@@ -39,4 +40,7 @@ a {
   margin-top: auto;
 
   max-height: 20px;
+  background-color: var(--btn);
+  border: 1px solid var(--fav-btn);
+  padding-top: 3px;
 }

@@ -7,7 +7,7 @@ export default function ThemeSwitcher() {
   return (
     <>
       <button className={styles.theme} onClick={toggleTheme}>
-        {theme === "light" ? <FiSun /> : <FiMoon />}
+        {theme === "light" ? <FiMoon /> : <FiSun />}
       </button>
     </>
   );
