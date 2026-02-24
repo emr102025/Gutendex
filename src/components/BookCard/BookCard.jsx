@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./BookCard.module.css";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-export default function BookCard({ book }) {
+export default function BookCard({ book, isFavorite, toggleFavorite }) {
+  console.log(isFavorite);
   return (
     <article className={styles.bookCard}>
       <Link to={`/book/${book.id}`}>
@@ -17,6 +19,12 @@ export default function BookCard({ book }) {
           </p>
         </section>
       </Link>
+      <button
+        className={styles.favoritesBtn}
+        onClick={() => toggleFavorite(book)}
+      >
+        {isFavorite(book.id) ? <FaHeart /> : <FaRegHeart />}
+      </button>
     </article>
   );
 }

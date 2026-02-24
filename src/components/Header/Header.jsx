@@ -19,7 +19,9 @@ export default function Header() {
         <div className={styles.searchBar}>
           <SearchBar />
         </div>
-        <button className={styles.favorites}>Favorites</button>
+        <Link to="/favorites">
+          <p className={styles.favorites}>Favorites</p>
+        </Link>
         <ThemeSwitcher />
       </nav>
     </header>

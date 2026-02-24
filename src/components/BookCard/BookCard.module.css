@@ -1,11 +1,11 @@
 .bookCard {
-  height: 300;
   border: 2px solid var(--color-border-card);
   border-radius: var(--radius-sm);
   max-width: min-content;
   padding: 15px;
-  height: 470px;
+  height: 500px;
   display: flex;
+  flex-direction: column;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -15,7 +15,6 @@
   transform: translateY(-5px);
 }
 .bookCover {
-  position: cover;
   height: fit-content;
 }
 a {
@@ -25,7 +24,19 @@ a {
   padding: 10px;
   color: var(--color-text);
 }
+.bookTitle {
+  display: -webkit-box; /* Because the title is too long on some books */
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .author {
   margin-top: 20px;
-  text-align: bottom;
+}
+.favoritesBtn {
+  align-self: flex-end;
+  margin-top: auto;
+
+  max-height: 20px;
 }

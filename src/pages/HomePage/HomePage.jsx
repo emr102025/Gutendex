@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import useFavorites from "../../hooks/useFavorites";
 import BookList from "../../components/BookList/BookList.jsx";
 import Pagination from "../../components/Pagination/Pagination.jsx";
 import { fetchSearchBooks } from "../../api/axiosGutendex.js";
@@ -9,6 +10,7 @@ export default function HomePage() {
   const [books, setBooks] = useState([]);
   const location = useLocation();
   const [loading, setLoading] = useState(true);
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   // get query from url
   const searchResult = new URLSearchParams(location.search).get("q");
@@ -38,7 +40,11 @@ export default function HomePage() {
     <>
       <h2 className={styles.homePage}>Search results for "{searchResult}"</h2>
       <div className={styles.searchList}>
-        <BookList books={books} />
+        <BookList
+          books={books}
+          isFavorite={isFavorite}
+          toggleFavorite={toggleFavorite}
+        />
       </div>
     </>
   );
