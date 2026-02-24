@@ -10,3 +10,22 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1200px) {
+  .bookList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .bookList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .bookList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
