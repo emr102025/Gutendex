@@ -11,34 +11,37 @@ import FavoritesPage from "./pages/FavoritesPage/FavoritePage.jsx";
 import "./Index.css";
 import { ThemeProvider } from "./components/Context/ThemeContext.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: "search",
-        element: <HomePage />,
-      },
-      {
-        path: "category/:categoryName",
-        element: <CategoryPage />,
-      },
-      {
-        path: "book/:id",
-        element: <DetailsPage />,
-      },
-      {
-        path: "favorites",
-        element: <FavoritesPage />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "search",
+          element: <HomePage />,
+        },
+        {
+          path: "category/:categoryName",
+          element: <CategoryPage />,
+        },
+        {
+          path: "book/:id",
+          element: <DetailsPage />,
+        },
+        {
+          path: "favorites",
+          element: <FavoritesPage />,
+        },
+      ],
+    },
+  ],
+  { basename: "/Gutendex" },
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
