@@ -29,7 +29,6 @@ input::placeholder {
   border: none;
   font-size: var(--font-size-p);
   height: 40px;
-  font-family: "OFL";
 }
 
 @media (max-width: 1200px) {

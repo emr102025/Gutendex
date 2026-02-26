@@ -5,7 +5,6 @@
   color: var(--text-color);
   font-size: var(--font-size-p);
   height: 40px;
-  font-family: "OFL";
   background-color: var(--btn);
 }
 

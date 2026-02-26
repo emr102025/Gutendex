@@ -1,7 +1,6 @@
 .header {
   display: block;
   background-color: var(--header-bg);
-  font-family: "OFL";
   height: auto;
 }
 .header a {
@@ -53,7 +52,6 @@
   color: var(--text-color);
   font-size: var(--font-size-p);
   height: 40px;
-  font-family: "OFL";
 }
 
 @media (max-width: 700px) {
